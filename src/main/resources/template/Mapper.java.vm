@@ -1,0 +1,34 @@
+package ${package}.mapper;
+
+import java.util.List;
+import java.util.Map;
+import ${package}.entity.${className}Entity;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Mapper
+public interface ${className}Mapper {
+
+    ${className}Entity queryObject(Object id);
+
+    List<${className}Entity> queryList(Map<String, Object> map);
+
+    int queryTotal(Map<String, Object> map);
+
+    void save(${className}Entity t);
+
+    void save(Map<String, Object> map);
+
+    int update(${className}Entity t);
+
+    int update(Map<String, Object> map);
+
+    int delete(Object value);
+
+    int deleteBatch(Object[] ids);
+}
